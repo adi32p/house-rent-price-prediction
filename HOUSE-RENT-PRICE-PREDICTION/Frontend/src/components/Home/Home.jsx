@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 import Button from "../ui/Button";
 import { Card, CardContent } from "../ui/Card";
 import { motion } from "framer-motion";
-
 import leftSideImage from "../../assets/images/left-side.jpg";
-import bghome from "../../assets/images/bg-home-2.jpg";
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <div>
       <section
@@ -36,7 +35,7 @@ export default function Home() {
                 accurately.
               </p>
               <Link to="/predict">
-                <Button>Get Started</Button>
+                <Button button onClick={() => navigate("/predict")}>Get Started</Button>
               </Link>
             </CardContent>
           </Card>
