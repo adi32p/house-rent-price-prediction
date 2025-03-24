@@ -10,13 +10,12 @@ import Layout from "./Layout"; // ✅ Ensure Layout is handling Outlet properly
 import Home from "./components/Home/Home.jsx"; 
 import HousePrediction from "./components/HousePrediction"; // ✅ Import the new page
 import "./index.css";
-import RentForm from "./components/RentForm";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
-      <Route path="predict" element={<RentForm />} /> {/* ✅ Added Route */}
+      <Route path="predict" element={<HousePrediction />} /> {/* ✅ Corrected Route */}
     </Route>
   )
 );
